@@ -1,42 +1,77 @@
 /* general style */
 
-*{
+/* general style */
+
+* {
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
     box-sizing: border-box;
-
-}
-
-
-body{
+  }
+  
+  body {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: crimson;
-
-}
-
-.container{
-    display: grid;
-    place-items: center;
+  }
+  
+  .parallax-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://media.istockphoto.com/id/860183812/fr/photo/jeux-de-hasard-et-de-la-d%C3%A9pendance-aux-jeux-de-hasard-concept.jpg?s=612x612&w=0&k=20&c=eMw-TPocDdRyG4_B7_SzOFUS_dBoogArLlQMXgrGOwY=');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateZ(-1px);
+  }
+  
+  .content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 250px;
-    padding: 60px 0 40px;
+    height: 350px;
     border-radius: 30px;
     background: #eeeeee;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-}
-
+    opacity: 100;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+  }
+  
+  
 /* Dice styles */
 
 .dice{
     position: relative;
     width: 100px;
     height: 100px;
-    transform-style: preserve-3d; 
-        animation: rolling 4s;
+    transform-style: preserve-3d;
+    transition: 1s ease; 
+    
+
 }
 
 @keyframes rolling {
@@ -168,3 +203,18 @@ body{
    color:#fff;
    background: #b33951; 
 }
+
+.title {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: gold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  
