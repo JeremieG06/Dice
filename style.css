@@ -1,7 +1,6 @@
 /* general style */
 
-/* general style */
-
+/* Réinitialisation des styles par défaut */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +9,7 @@
     box-sizing: border-box;
   }
   
+  /* Style du body */
   body {
     height: 100vh;
     display: flex;
@@ -17,6 +17,7 @@
     justify-content: center;
   }
   
+  /* Style du conteneur de parallaxe */
   .parallax-container {
     position: relative;
     width: 100%;
@@ -24,6 +25,7 @@
     overflow: hidden;
   }
   
+  /* Style de l'effet de parallaxe */
   .parallax {
     position: absolute;
     top: 0;
@@ -38,6 +40,7 @@
     transform: translateZ(-1px);
   }
   
+  /* Style du conteneur de contenu */
   .content-container {
     position: absolute;
     top: 50%;
@@ -45,6 +48,7 @@
     transform: translate(-50%, -50%);
   }
   
+  /* Style du conteneur principal */
   .container {
     display: flex;
     flex-direction: column;
@@ -61,39 +65,33 @@
     margin-top: 100px;
   }
   
+  /* Styles du dé */
   
-/* Dice styles */
-
-.dice{
+  .dice {
     position: relative;
     width: 100px;
     height: 100px;
     transform-style: preserve-3d;
-    transition: 1s ease; 
-    
-
-}
-
-@keyframes rolling {
-    50%{
-        transform: rotateX(455deg) rotateY(455deg);
+    transition: 1s ease;
+  }
+  
+  @keyframes rolling {
+    50% {
+      transform: rotateX(455deg) rotateY(455deg);
     }
-}
-
-.face{
+  }
+  
+  .face {
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 20px;
     border: 5px solid whitesmoke;
     transform-style: preserve-3d;
-    background: linear-gradient(
-        145deg, #dddbd8, #fff
-    );
-    
-}
-
-.face::before {
+    background: linear-gradient(145deg, #dddbd8, #fff);
+  }
+  
+  .face::before {
     position: absolute;
     content: '';
     width: 100%;
@@ -101,10 +99,9 @@
     border-radius: 20px;
     background: #f6f3f0;
     transform: translateZ(-1px);
-
-}
-
-.face::after {
+  }
+  
+  .face::after {
     position: absolute;
     content: '';
     top: 50%;
@@ -113,81 +110,67 @@
     height: 18px;
     border-radius: 50%;
     background-color: black;
-}
-
-.front{
-    transform:translateZ(50px);
-}
-
-.back{
+  }
+  
+  .front {
+    transform: translateZ(50px);
+  }
+  
+  .back {
     transform: rotateX(180deg) translateZ(50px);
-}
-
-.top{
+  }
+  
+  .top {
     transform: rotateX(90deg) translateZ(50px);
-}
-
-.bottom{
+  }
+  
+  .bottom {
     transform: rotateX(-90deg) translateZ(50px);
-}
-
-.right{
+  }
+  
+  .right {
     transform: rotateY(90deg) translateZ(50px);
-}
-
-.left{
+  }
+  
+  .left {
     transform: rotateY(-90deg) translateZ(50px);
-}
-
-
-.front::after{
+  }
+  
+  .front::after {
     width: 30px;
     height: 30px;
     background-color: #f63330;
     margin: -15px 0 0 -15px;
-}
-
-.back::after{
+  }
+  
+  .back::after {
     margin: -35px 0 0 -30px;
-    box-shadow: 40px 0,
-                0px 25px,
-                40px 25px,
-                0px 50px,
-                40px 50px;
-
-}
-
-.top::after{
+    box-shadow: 40px 0, 0px 25px, 40px 25px, 0px 50px, 40px 50px;
+  }
+  
+  .top::after {
     margin: -30px 0 0 -30px;
     box-shadow: 40px 40px;
-
-}
-
-.bottom::after{
+  }
+  
+  .bottom::after {
     margin: -36px 0 0 -36px;
-    box-shadow: 26px 26px,
-                52px 52px,
-                52px 0,
-                0 52px;
-
-}
-
-.right::after{
+    box-shadow: 26px 26px, 52px 52px, 52px 0, 0 52px;
+  }
+  
+  .right::after {
     margin: -30px 0 0 -30px;
-    box-shadow: 40px 0,
-                0 40px,
-                40px 40px;
-}
-
-.left::after{
+    box-shadow: 40px 0, 0 40px, 40px 40px;
+  }
+  
+  .left::after {
     margin: -35px 0 0 -35px;
-    box-shadow: 25px 25px,
-                50px 50px ;
-}
-
-/* Roll Button styles */
-
-.roll{
+    box-shadow: 25px 25px, 50px 50px;
+  }
+  
+  /* Styles du bouton Roll */
+  
+  .roll {
     cursor: pointer;
     color: #b33951;
     margin-top: 60px;
@@ -196,15 +179,16 @@
     font: 700 16px 'Montserrat';
     border: 2px solid #b33951;
     transition: .4s;
-    
-}
-
-.roll:hover {
-   color:#fff;
-   background: #b33951; 
-}
-
-.title {
+  }
+  
+  .roll:hover {
+    color: #fff;
+    background: #b33951;
+  }
+  
+  /* Styles du titre */
+  
+  .title {
     position: fixed;
     top: 0;
     left: 50%;
@@ -216,5 +200,4 @@
     z-index: 2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
-  
   
